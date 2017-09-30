@@ -1,0 +1,41 @@
+
+<!-- 1step :: include angular in project-->
+<!-- 1step :: include app in project-->
+<!-- 2step :: let html know about your app module-->
+
+<!DOCTYPE html >
+<html lang="en" ng-app="app">
+<head>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+
+    <script src="con.js"></script>
+    <script src="factoryOne.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body ng-controller="myControler">
+
+    <!--if divisible by 3 print foo-->
+    <!--if divisible by 5 print bar-->
+    <!--if divisible by 3 and 5 both print foobar-->
+    <!--else print the value -->
+    <input type="number" ng-model="numberInput">
+
+    <p > {{ result }}</p>
+    <hr>
+    <code> {{ addResult }}</code>
+    <code> {{ subResult }}</code>
+
+    <button ng-click="showDivider(numberInput)">click</button>
+
+
+    <input type="number" ng-model="numOne">
+    <input type="number" ng-model="numTwo">
+
+    <button ng-click="addNumbers(numOne,numTwo)">add</button>
+
+    <button ng-click="SubtractNumbers(numOne,numTwo)">subtract</button>
+
+    </body>
+</html>
